@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<style>
+   body {
+    -webkit-appearance: none;
+    display: grid;
+    grid-template-columns: 100%;
+   
+   }
+   
+
+.navBar {
+    display: flex;
+    flex-wrap: nowrap;
+    font-family: arial, sans-serif;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.87);
+    justify-content: space-between;
+    min-height: 100%;
+    min-width: 400px;
+    margin: 0px;
+    top: 0px;
+}
+.navBar a {
+    text-decoration: none;
+    color: rgba(0,0,0, 0.87);
+}
+.navBar a:hover {
+    text-decoration: underline;
+}
+.leftNav {
+    align-self: flex-start;
+}
+.rightNav {
+    align-self: flex-end;
+}
+
+.footbar {
+    display: flex;
+    flex-wrap: nowrap;
+    font-family: arial, sans-serif;
+    justify-content: space-between;
+    min-height: 100%;
+    min-width: 400px;
+    margin: 0px;
+    bottom: 0px;
+    background-color: #f2f2f2; 
+    outline-color: rgba(0,0,0,0.87);
+}
+.footbar a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 14px;
+}
+.footbar a:hover {
+    text-decoration: underline;
+}
+
+#signin {
+    background-color: rgb(66, 133, 244);
+    padding: 0px 12px 0px 12px;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.googleLogo{
+    padding-top: 21px;
+}
+</style>
+<body>
+    
+    <div class="navBar">
+        <div class="leftNav">
+            <a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header"> About</a>
+            <a href="https://store.google.com/US?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a>
+        </div>
+        <div class="rightNav">
+            <a href="">Gmail</a>
+            <a href="">Images</a>
+            <a href="" alt="products">products</a>
+            <a id="signin" href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAAQ">Sign In</a>
+        </div>
+    </div>
+    
+    <img class="googleLogo" alt="Google Logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+
+    <div class="searchbar"><input type="text"></div>
+    <div>
+        <button>Google Search </button>
+        <button>I'm Feeling Lucky</button>
+    </div>
+    <footer>
+        <div class="footbar">
+            <div class="leftFoot">
+                <a href= "">Advertising</a>
+                <a href="">Business</a>
+                <a href="">How Search works</a>
+            </div>
+            <div class="footCenter">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAMAAAAiV0Z6AAAAPFBMVEVLoEN0wU6CzFKCzFKCzFKCzFKCzFJSo0MSczNDmkCCzFJPoUMTczNdr0gmgziCzFITczMTczMTczMTczPh00jOAAAAFHRSTlPF/+bIsms8Ad///hX+//5/tXw7aMEAx10AAACaSURBVHgBbc4HDoRQCATQ33tbvf9dF9QxaCT9UQaltLHOh/golXKhMs5Xqa0xU1lyoa2fXFyQOsDG38qsLy4TaV+sFislovyhPzLJJrBu6eQOtpW0LjbJkzTuTDLRVNKa3uxJI+VdiRqXSeu6GW+Qxi29eLIi8H7EsYrT42BD+mQtNO5JMjRuC4lSY8V4hsLX0egGijvUSEP9AbylEsOkeCgWAAAAAElFTkSuQmCC">
+                <a href="">Carbon neutral since 2007</a>
+            </div>
+            <div class="footRight">
+                <a href="">Privacy</a>
+                <a href="">Terms</a>
+                <a href="">Settings</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
