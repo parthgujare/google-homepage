@@ -7,32 +7,26 @@
                         "sbar"
                         "buttons"
                         "footbar";
-    
    }
    
 ul {
     list-style-type: none;
-    margin: 0;
     padding: 0;
-    
+    margin-top: 10px;
     height: 0px;
     min-width: 400px;
-    margin: 0px;
     grid-area: navBar;
     font-family: arial, sans-serif;
-    font-size: 13px;
+    font-size: 11px;
 }
-
 
 li {
     float: left;
-  
 }
 li a {
     text-decoration: none;
     color: rgba(0,0,0, 0.87);
-    padding: 3px;
-    
+    padding: 4px;  
 }
 li a:hover {
     text-decoration: underline;
@@ -40,10 +34,11 @@ li a:hover {
 
 #signin {
     background-color: rgb(66, 133, 244);
-    padding: 0px 12px 0px 12px;
+    padding: 6px 9px 6px 9px;
     color: white;
     font-weight: 700;
     text-decoration: none;
+    border-radius: 5%;
 }
 
 .googleLogo{
@@ -52,53 +47,50 @@ li a:hover {
     grid-area: gLogo;
 }
 
-.
- .searchbar{
-    display: flex;
-    flex-direction: row;
-    padding: 15px;
-    grid-area: sbar;
-    
-}
-
 .buttons{
     display: flex;
     flex-direction: row;
-    justify-items: space-evenly;
+    justify-self:center;
+    margin-top: 1.8em;
 }
 #textbox {
-    border-radius: 15px;
+    border-radius: 25px;
     width: 35em;
-    height: 2em;
+    height: .15em;
     border: 2px solid lightgray;
+    justify-self: center;
+    padding: 15px;
+    grid-area: sbar;
+    margin-top: 1.8em;
+
 }
 
 .footbar {
-   display: flex;
-   flex-direction: row;
-   flex-wrap: nowrap;
-   font-family: arial, sans-serif;
-   justify-content: space-between;
    height: 30px; 
-   bottom: 0px;
-   min-width: 400px;
    background-color: #f2f2f2; 
    grid-area: footbar;
-   justify-items: center;
-   
+   border-top: 1px solid #bbb;
+   bottom: 0px;
+  
 }
 
 .footbar a {
-   text-decoration: none;
-   color: rgba(0, 0, 0, 0.87);
    font-size: 14px;
-   vertical-align: -webkit-baseline-middle;
-   align-self: end;
+}
 
+button {
+    padding-top: .8em;
+    padding-bottom: .8em;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 14px;
+    font-family: arial, sans-serif;
+    border:0px;
+    border-radius: 4px;
+    color: rgb(60,64,67);
+    background-color: rgb(248,249,250);
 }
-.footbar a:hover {
-   text-decoration: underline;
-}
+
 </style>
 <body>
     
@@ -113,30 +105,22 @@ li a:hover {
     
     <img class="googleLogo" alt="Google Logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
 
-    <div class="searchbar">
-        <input id="textbox" type="text">
-    </div>
+    <input id="textbox" type="text">
     
     <div class="buttons">
         <button>Google Search </button>
-        <button>I'm Feeling Lucky</button>
+        <button style="margin-left: .8em">I'm Feeling Lucky</button>
     </div>
     
-        <div class="footbar">
-            <div class="leftFoot">
-                <a href= "">Advertising</a>
-                <a href="">Business</a>
-                <a href="">How Search works</a>
-            </div>
-            <div class="footCenter">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAMAAAAiV0Z6AAAAPFBMVEVLoEN0wU6CzFKCzFKCzFKCzFKCzFJSo0MSczNDmkCCzFJPoUMTczNdr0gmgziCzFITczMTczMTczMTczPh00jOAAAAFHRSTlPF/+bIsms8Ad///hX+//5/tXw7aMEAx10AAACaSURBVHgBbc4HDoRQCATQ33tbvf9dF9QxaCT9UQaltLHOh/golXKhMs5Xqa0xU1lyoa2fXFyQOsDG38qsLy4TaV+sFislovyhPzLJJrBu6eQOtpW0LjbJkzTuTDLRVNKa3uxJI+VdiRqXSeu6GW+Qxi29eLIi8H7EsYrT42BD+mQtNO5JMjRuC4lSY8V4hsLX0egGijvUSEP9AbylEsOkeCgWAAAAAElFTkSuQmCC">
-                <a href="">Carbon neutral since 2007</a>
-            </div>
-            <div class="footRight">
-                <a href="">Privacy</a>
-                <a href="">Terms</a>
-                <a href="">Settings</a>
-            </div>
-        </div>
+        <ul class="footbar">
+                <li><a href= "">Advertising</a></li>
+                <li><a href="">Business</a></li>
+                <li><a href="">How Search works</a></li>
+                <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAMAAAAiV0Z6AAAAPFBMVEVLoEN0wU6CzFKCzFKCzFKCzFKCzFJSo0MSczNDmkCCzFJPoUMTczNdr0gmgziCzFITczMTczMTczMTczPh00jOAAAAFHRSTlPF/+bIsms8Ad///hX+//5/tXw7aMEAx10AAACaSURBVHgBbc4HDoRQCATQ33tbvf9dF9QxaCT9UQaltLHOh/golXKhMs5Xqa0xU1lyoa2fXFyQOsDG38qsLy4TaV+sFislovyhPzLJJrBu6eQOtpW0LjbJkzTuTDLRVNKa3uxJI+VdiRqXSeu6GW+Qxi29eLIi8H7EsYrT42BD+mQtNO5JMjRuC4lSY8V4hsLX0egGijvUSEP9AbylEsOkeCgWAAAAAElFTkSuQmCC"></li>
+                <li><a href="">Carbon neutral since 2007</a></li>
+                <li style="float:right"><a href="">Privacy</a></li>
+                <li style="float:right"><a href="">Terms</a></li>
+                <li style="float:right"><a href="">Settings</a></li>
+        </ul>
 </body>
 
