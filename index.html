@@ -1,77 +1,40 @@
 <!DOCTYPE html>
 <style>
    body {
-    -webkit-appearance: none;
     display: grid;
-    grid-template-columns: 100%;
-    margin: 0px;
-    margin-top: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
-    grid-template-areas:
-        "nav Bar"
-        "googleLogo"
-        "searchbar"
-        "buttons"
-        "footbar";
-    align-items:center;
-
+    grid-template-areas: "navBar"
+                        "gLogo"
+                        "sbar"
+                        "buttons"
+                        "footbar";
+    
    }
    
-
-.navBar {
-    display: flex;
-    flex-wrap: nowrap;
-    font-family: arial, sans-serif;
-    font-size: 13px;
-    color: rgba(0, 0, 0, 0.87);
-    justify-content: space-between;
-    min-height: 100%;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    height: 0px;
     min-width: 400px;
     margin: 0px;
-    top: 0px;
+    grid-area: navBar;
+    font-family: arial, sans-serif;
+    font-size: 13px;
 }
-.navBar a {
+
+
+li {
+    float: left;
+  
+}
+li a {
     text-decoration: none;
     color: rgba(0,0,0, 0.87);
+    padding: 3px;
+    
 }
-.navBar a:hover {
-    text-decoration: underline;
-}
-.leftNav {
-    align-self: flex-start;
-}
-.rightNav {
-    align-self: flex-end;
-}
-
-.footbar {
-    display: flex;
-    flex-wrap: nowrap;
-    font-family: arial, sans-serif;
-    justify-content: space-between;
-    min-height: 100%;
-    min-width: 400px;
-    background-color: #f2f2f2; 
-    outline-color: rgba(0,0,0,0.87);
-    align-self: end;
-    grid-row-start: 5;
-    grid-row-end: 6;
-
-}
-.footer {
-    align-self: end;
-    bottom: 0px;
-}
-.footbar a {
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.87);
-    font-size: 14px;
-    vertical-align: -webkit-baseline-middle;
-    align-self: end;
-
-}
-.footbar a:hover {
+li a:hover {
     text-decoration: underline;
 }
 
@@ -86,15 +49,22 @@
 .googleLogo{
     padding-top: 21px;
     justify-self: center;
+    grid-area: gLogo;
+}
+
+.
+ .searchbar{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    grid-area: sbar;
+    
 }
 
 .buttons{
-    justify-self: center;
-}
-.searchbar{
-    justify-self: center;
-    padding: 15px;
-    
+    display: flex;
+    flex-direction: row;
+    justify-items: space-evenly;
 }
 #textbox {
     border-radius: 15px;
@@ -102,25 +72,51 @@
     height: 2em;
     border: 2px solid lightgray;
 }
+
+.footbar {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   font-family: arial, sans-serif;
+   justify-content: space-between;
+   height: 30px; 
+   bottom: 0px;
+   min-width: 400px;
+   background-color: #f2f2f2; 
+   grid-area: footbar;
+   justify-items: center;
+   
+}
+
+.footbar a {
+   text-decoration: none;
+   color: rgba(0, 0, 0, 0.87);
+   font-size: 14px;
+   vertical-align: -webkit-baseline-middle;
+   align-self: end;
+
+}
+.footbar a:hover {
+   text-decoration: underline;
+}
 </style>
 <body>
     
-    <div class="navBar">
-        <div class="leftNav">
-            <a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header"> About</a>
-            <a href="https://store.google.com/US?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a>
-        </div>
-        <div class="rightNav">
-            <a href="">Gmail</a>
-            <a href="">Images</a>
-            <a href="" alt="products">products</a>
-            <a id="signin" href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAAQ">Sign In</a>
-        </div>
-    </div>
+    <ul class="navBar">
+            <li><a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header"> About</a></li>
+            <li><a href="https://store.google.com/US?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a></li>
+            <li style="float:right"><a id="signin" href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAAQ">Sign In</a></li>
+            <li style="float:right"><a href="" alt="products">products</a></li>
+            <li style="float:right"><a href="">Images</a></li>
+            <li style="float:right"><a href="">Gmail</a></li>
+    </ul>
     
     <img class="googleLogo" alt="Google Logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
 
-    <div class="searchbar"><input id="textbox" type="text"></div>
+    <div class="searchbar">
+        <input id="textbox" type="text">
+    </div>
+    
     <div class="buttons">
         <button>Google Search </button>
         <button>I'm Feeling Lucky</button>
