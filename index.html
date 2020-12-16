@@ -26,11 +26,15 @@ ul {
 li {
     float: left;
 }
+
 li a {
     text-decoration: none;
     color: rgba(0,0,0, 0.87);
-    padding: 4px;  
+    padding: 4px;
+    text-align: center;
 }
+
+
 li a:hover {
     text-decoration: underline;
 }
@@ -44,6 +48,7 @@ li a:hover {
     text-decoration: none;
     border-radius: 5%;
     margin-right: 20px;
+    margin-left: 7px;
 }
 
 .googleLogo{
@@ -70,8 +75,11 @@ button:hover {
     justify-self: center;
     padding: 15px;
     grid-area: sbar;
-    margin-top: 1.8em;
+    margin-top: 1.8em
+}
 
+#textbox:hover {
+    
 }
 
 .footbar {
@@ -80,19 +88,15 @@ button:hover {
    border-top: 1px solid #bbb;
     grid-area: footer;
    bottom: 0em;
-   align-items: center;
    margin: 0px;
 }
 
-.footbar li {
-    text-align: center;
-    align-self: center;
+.footbar a {
+    color:#70757A;
+    font-size: 14px;
+  
 }
 
-.fitems {
-   font-size: 14px;
-   color: #70757A;
-}
 
 button {
     padding-top: .8em;
@@ -113,9 +117,9 @@ button {
     <ul class="navBar">
             <li style="margin-left: 18px"><a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header"> About</a></li>
             <li><a href="https://store.google.com/US?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a></li>
-            <li style="float:right"><a id="signin" href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAAQ">Sign In</a></li>
-            <li style="float:right"><a href="" alt="products">products</a></li>
-            <li style="float:right"><a href="">Images</a></li>
+            <li style="float:right; padding-left:15px;"><a id="signin" href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAAQ">Sign In</a></li>
+            <li style="float:right; padding-left: 15px;"><a href="" alt="products"><img style="height: 15px; width: 15px;" src="https://cdn.onlinewebfonts.com/svg/img_63957.png"></a></li>
+            <li style="float:right; padding-left:15px;"><a href="">Images</a></li>
             <li style="float:right"><a href="">Gmail</a></li>
     </ul>
     
@@ -132,8 +136,6 @@ button {
                 <li style = "padding-left: 27px" class = "fitems"><a href= "">Advertising</a></li>
                 <li class = "fitems" style="margin-left: 27px;"><a href="">Business</a></li>
                 <li class = "fitems" style="margin-left: 27px;"><a href="">How Search works</a></li>
-                <li class = "fitems"><img style="height:14px;"src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAMAAAAiV0Z6AAAAPFBMVEVLoEN0wU6CzFKCzFKCzFKCzFKCzFJSo0MSczNDmkCCzFJPoUMTczNdr0gmgziCzFITczMTczMTczMTczPh00jOAAAAFHRSTlPF/+bIsms8Ad///hX+//5/tXw7aMEAx10AAACaSURBVHgBbc4HDoRQCATQ33tbvf9dF9QxaCT9UQaltLHOh/golXKhMs5Xqa0xU1lyoa2fXFyQOsDG38qsLy4TaV+sFislovyhPzLJJrBu6eQOtpW0LjbJkzTuTDLRVNKa3uxJI+VdiRqXSeu6GW+Qxi29eLIi8H7EsYrT42BD+mQtNO5JMjRuC4lSY8V4hsLX0egGijvUSEP9AbylEsOkeCgWAAAAAElFTkSuQmCC"></li>
-                <li class = "fitems"><a href="">Carbon neutral since 2007</a></li>
                 <li class = "fitems" style="float:right; margin-right: 30px; margin-left: 27px;"><a href="">Settings</a></li>
                 <li class = "fitems" style="float:right; margin-left: 27px;"><a href="">Terms</a></li>
                 <li class = "fitems" style="float:right; margin-left: 27px; "><a href="">Privacy</a></li>
