@@ -6,13 +6,16 @@
                         "gLogo"
                         "sbar"
                         "buttons"
-                        "footbar";
+                        "footer";
+    grid-template-rows: auto 1fr auto auto 2fr;
+    margin: 0px;
+    align-items: flex-end;
    }
    
 ul {
     list-style-type: none;
     padding: 0;
-    margin-top: 10px;
+    margin-top: 18px;
     height: 0px;
     min-width: 400px;
     grid-area: navBar;
@@ -32,6 +35,7 @@ li a:hover {
     text-decoration: underline;
 }
 
+
 #signin {
     background-color: rgb(66, 133, 244);
     padding: 6px 9px 6px 9px;
@@ -39,12 +43,13 @@ li a:hover {
     font-weight: 700;
     text-decoration: none;
     border-radius: 5%;
+    margin-right: 20px;
 }
 
 .googleLogo{
-    padding-top: 21px;
     justify-self: center;
     grid-area: gLogo;
+    margin-top: 7em;
 }
 
 .buttons{
@@ -53,11 +58,15 @@ li a:hover {
     justify-self:center;
     margin-top: 1.8em;
 }
+button:hover {
+    border: 1px solid #dadce0;
+
+}
 #textbox {
     border-radius: 25px;
     width: 35em;
     height: .15em;
-    border: 2px solid lightgray;
+    border: 1px solid lightgray;
     justify-self: center;
     padding: 15px;
     grid-area: sbar;
@@ -68,14 +77,21 @@ li a:hover {
 .footbar {
    height: 30px; 
    background-color: #f2f2f2; 
-   grid-area: footbar;
    border-top: 1px solid #bbb;
-   bottom: 0px;
-  
+    grid-area: footer;
+   bottom: 0em;
+   align-items: center;
+   margin: 0px;
 }
 
-.footbar a {
+.footbar li {
+    text-align: center;
+    align-self: center;
+}
+
+.fitems {
    font-size: 14px;
+   color: #70757A;
 }
 
 button {
@@ -95,7 +111,7 @@ button {
 <body>
     
     <ul class="navBar">
-            <li><a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header"> About</a></li>
+            <li style="margin-left: 18px"><a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header"> About</a></li>
             <li><a href="https://store.google.com/US?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a></li>
             <li style="float:right"><a id="signin" href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAAQ">Sign In</a></li>
             <li style="float:right"><a href="" alt="products">products</a></li>
@@ -108,19 +124,19 @@ button {
     <input id="textbox" type="text">
     
     <div class="buttons">
-        <button>Google Search </button>
+        <button href="">Google Search </button>
         <button style="margin-left: .8em">I'm Feeling Lucky</button>
     </div>
     
         <ul class="footbar">
-                <li><a href= "">Advertising</a></li>
-                <li><a href="">Business</a></li>
-                <li><a href="">How Search works</a></li>
-                <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAMAAAAiV0Z6AAAAPFBMVEVLoEN0wU6CzFKCzFKCzFKCzFKCzFJSo0MSczNDmkCCzFJPoUMTczNdr0gmgziCzFITczMTczMTczMTczPh00jOAAAAFHRSTlPF/+bIsms8Ad///hX+//5/tXw7aMEAx10AAACaSURBVHgBbc4HDoRQCATQ33tbvf9dF9QxaCT9UQaltLHOh/golXKhMs5Xqa0xU1lyoa2fXFyQOsDG38qsLy4TaV+sFislovyhPzLJJrBu6eQOtpW0LjbJkzTuTDLRVNKa3uxJI+VdiRqXSeu6GW+Qxi29eLIi8H7EsYrT42BD+mQtNO5JMjRuC4lSY8V4hsLX0egGijvUSEP9AbylEsOkeCgWAAAAAElFTkSuQmCC"></li>
-                <li><a href="">Carbon neutral since 2007</a></li>
-                <li style="float:right"><a href="">Privacy</a></li>
-                <li style="float:right"><a href="">Terms</a></li>
-                <li style="float:right"><a href="">Settings</a></li>
+                <li style = "padding-left: 27px" class = "fitems"><a href= "">Advertising</a></li>
+                <li class = "fitems" style="margin-left: 27px;"><a href="">Business</a></li>
+                <li class = "fitems" style="margin-left: 27px;"><a href="">How Search works</a></li>
+                <li class = "fitems"><img style="height:14px;"src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAMAAAAiV0Z6AAAAPFBMVEVLoEN0wU6CzFKCzFKCzFKCzFKCzFJSo0MSczNDmkCCzFJPoUMTczNdr0gmgziCzFITczMTczMTczMTczPh00jOAAAAFHRSTlPF/+bIsms8Ad///hX+//5/tXw7aMEAx10AAACaSURBVHgBbc4HDoRQCATQ33tbvf9dF9QxaCT9UQaltLHOh/golXKhMs5Xqa0xU1lyoa2fXFyQOsDG38qsLy4TaV+sFislovyhPzLJJrBu6eQOtpW0LjbJkzTuTDLRVNKa3uxJI+VdiRqXSeu6GW+Qxi29eLIi8H7EsYrT42BD+mQtNO5JMjRuC4lSY8V4hsLX0egGijvUSEP9AbylEsOkeCgWAAAAAElFTkSuQmCC"></li>
+                <li class = "fitems"><a href="">Carbon neutral since 2007</a></li>
+                <li class = "fitems" style="float:right; margin-right: 30px; margin-left: 27px;"><a href="">Settings</a></li>
+                <li class = "fitems" style="float:right; margin-left: 27px;"><a href="">Terms</a></li>
+                <li class = "fitems" style="float:right; margin-left: 27px; "><a href="">Privacy</a></li>
         </ul>
 </body>
 
